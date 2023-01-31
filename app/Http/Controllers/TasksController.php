@@ -84,6 +84,7 @@ class TasksController extends Controller
     }
 
     private function isNotAuthorized($task){
+
         if(Auth::user()->id != $task->user_id){
             return $this->error('','You are not authorized to make this request',403);
         }

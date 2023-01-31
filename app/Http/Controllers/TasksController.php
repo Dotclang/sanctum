@@ -20,7 +20,7 @@ class TasksController extends Controller
     public function index()
     {
         return TasksResource::collection(
-            Task::where('user_id',Auth::user()->id)->get()
+            Task::where('user_id', Auth::user()->id)->get()
         );
     }
 
@@ -78,7 +78,7 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Task $task)
+    public function delete(Task $task)
     {
         return $this->isNotAuthorized($task) ? $this->isNotAuthorized($task) : $task->delete();
     }

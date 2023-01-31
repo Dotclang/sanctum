@@ -25,8 +25,8 @@ class TasksResource extends JsonResource
             ],
             'relationships'=>[
                 'id'=> (string) $this->user->id,
-                'user name'=> (string) $this->user->name,
-                'user email'=> (string) $this->user->email,
+                'name'=> (string) $this->user->name,
+                'email'=> (string) $this->user->email,
             ]
         ];
     }

@@ -78,7 +78,7 @@ class TasksController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete(Task $task)
+    public function destroy(Task $task)
     {
         return $this->isNotAuthorized($task) ? $this->isNotAuthorized($task) : $task->delete();
     }

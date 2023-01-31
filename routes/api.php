@@ -27,5 +27,5 @@ Route::post('/register',[AuthController::class,'register']);
 Route::group(['middleware'=> ['auth:sanctum']], function(){
     //routes protected
     Route::post('/logout',[AuthController::class,'logout']);
-    Route::apiResources('tasks', TasksController::class);
+    Route::resource('tasks', TasksController::class);
 });
